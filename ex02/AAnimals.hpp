@@ -1,20 +1,22 @@
-#ifndef ANIMALS_HPP
+#ifndef AANIMALS_HPP
 
-# define ANIMALS_HPP
+# define AANIMALS_HPP
 
 # include <iostream>
 # include <cstring>
 # include <string>
 
-class Animal
+class AAnimal
 {
 	public:
-		virtual ~Animal();
+		AAnimal();
+		AAnimal(const AAnimal &animal);
+		AAnimal &operator = (const AAnimal &animal);
+		virtual ~AAnimal();
 		virtual void		makeSound() const;
 		std::string			getType() const;
 
 	protected:
-		Animal();
 		std::string	_type;
 };
 

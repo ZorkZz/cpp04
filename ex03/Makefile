@@ -1,8 +1,8 @@
 NAME = ex02
 
-SRC = main.cpp AAnimals.cpp Cat.cpp Dog.cpp Brain.cpp
+SRC = main.cpp Animals.cpp Cat.cpp Dog.cpp Brain.cpp
 
-HEADER = AAnimals.hpp Cat.hpp Dog.hpp Brain.hpp
+HEADER = Animals.hpp Cat.hpp Dog.hpp Brain.hpp
 
 OBJ = $(SRC:%.cpp=%.zizi)
 

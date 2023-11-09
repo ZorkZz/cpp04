@@ -5,13 +5,15 @@
 # include <iostream>
 # include <cstring>
 # include <string>
-# include "Animals.hpp"
+# include "AAnimals.hpp"
 # include "Brain.hpp"
 
-class Dog : public Animal
+class Dog : public AAnimal
 {
 	public:
 		Dog();
+		Dog(const Dog &dog);
+		Dog &operator=(const Dog &dog);
 		virtual ~Dog();
 		virtual void		makeSound() const;
 

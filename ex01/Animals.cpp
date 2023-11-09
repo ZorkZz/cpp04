@@ -1,9 +1,23 @@
 #include "Animals.hpp"
 
+Animal::Animal(const Animal &animal)
+{
+	std::cout << "Animal copy constructor" << std::endl;
+	*this = animal;
+}
+
 Animal::Animal()
 {
 	_type = "Animal";
 	std::cout << "Animal Constructor" << std::endl;
+}
+
+Animal	&Animal::operator=(const Animal &animal)
+{
+	std::cout << "Copy assignement operator for Animal" << std::endl;
+	if (this != &animal)
+		this->_type = animal._type;
+	return (*this);
 }
 
 Animal::~Animal()

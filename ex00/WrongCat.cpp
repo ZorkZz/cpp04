@@ -29,8 +29,3 @@ void	WrongCat::makeSound() const
 {
 	std::cout << "Make WrongCat Sound" << std::endl;
 }
-
-std::ostream &operator<<(std::ostream &os, const WrongAnimal &wrong_animal)
-{
-	os << "Type: " << wrong_animal.getType();
-}

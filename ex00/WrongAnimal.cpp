@@ -34,3 +34,4 @@ std::string WrongAnimal::getType() const
 {
 	return (this->_type);
 }
+

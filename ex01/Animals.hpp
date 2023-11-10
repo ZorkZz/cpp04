@@ -20,6 +20,5 @@ class Animal
 		std::string	_type;
 };
 
-std::ostream &operator<<(std::ostream &os, const Animal &animal);
 
 #endif

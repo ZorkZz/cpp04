@@ -34,3 +34,8 @@ std::string Animal::getType() const
 {
 	return (this->_type);
 }
+
+std::ostream &operator<<(std::ostream &os, const Animal &animal)
+{
+	os << "Type: " << animal.getType();
+}

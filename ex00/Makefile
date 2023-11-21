@@ -10,17 +10,19 @@ RM = rm -rf
 
 CFLAGS = -Wall -Werror -Wextra -std=c++98 -g3
 
+DEPFLAGS = -MMD -MP
+
 CC = c++
 
 all: $(NAME)
 
-%.zizi: %.cpp $(HEADER) Makefile
-	@$(CC) $(CFLAGS) -c $< -o $@
-	@printf	"\033[1;33m \r\033[2KCreating -c $< -o $\n \033[0m"
+%.zizi: %.cpp  Makefile
+	$(CC) $(CFLAGS) $(DEPFLAGS) -c $< -o $@
+	# @printf	"\033[1;33m \r\033[2KCreating -c $< -o $\n \033[0m"
 
 $(NAME): $(OBJ) $(HEADER) Makefile
-	@$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
-	@printf	"\033[1;32m \r\033[2K Compiling $(NAME_CLIENT) : DONE \033[0m\n"
+	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
+	# @printf	"\033[1;32m \r\033[2K Compiling $(NAME_CLIENT) : DONE \033[0m\n"
 
 clean:
 	@$(RM) $(OBJ)

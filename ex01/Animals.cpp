@@ -6,6 +6,11 @@ Animal::Animal(const Animal &animal)
 	*this = animal;
 }
 
+Animal::Animal(std::string type): _type(type)
+{
+	std::cout << "Animal type constructor" << std::endl;
+}
+
 Animal::Animal()
 {
 	_type = "Animal";

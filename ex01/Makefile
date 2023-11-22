@@ -8,7 +8,9 @@ OBJ = $(SRC:%.cpp=%.zizi)
 
 RM = rm -rf
 
-CFLAGS = -Wall -Werror -Wextra -std=c++98 -g3
+CFLAGS = -Wall -Werror -Wextra -std=c++98 -g3 -MD -MP
+
+DEPENDS = $(OBJ:.zizi=.d)
 
 CC = c++
 
@@ -21,9 +23,11 @@ all: $(NAME)
 $(NAME): $(OBJ) $(HEADER) Makefile
 	@$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
 	@printf	"\033[1;32m \r\033[2K Compiling $(NAME_CLIENT) : DONE \033[0m\n"
+-include $(DEPENDS)
 
 clean:
 	@$(RM) $(OBJ)
+	@$(RM) $(DEPENDS)
 	@printf	"\033[1;31m \r\033[2KDeleting objects : DONE \033[0m\n"
 
 fclean: clean

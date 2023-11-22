@@ -6,6 +6,11 @@ AAnimal::AAnimal()
 	std::cout << "AAnimal Constructor" << std::endl;
 }
 
+AAnimal::AAnimal(std::string type): _type(type)
+{
+	std::cout << "Animal type constructor" << std::endl;
+}
+
 AAnimal::AAnimal(const AAnimal &animal)
 {
 	std::cout << "AAnimal copy constructor" << std::endl;

@@ -10,6 +10,7 @@ class AAnimal
 {
 	public:
 		AAnimal();
+		AAnimal(std::string type);
 		AAnimal(const AAnimal &animal);
 		AAnimal &operator = (const AAnimal &animal);
 		virtual ~AAnimal();

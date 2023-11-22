@@ -17,11 +17,11 @@ CC = c++
 all: $(NAME)
 
 %.zizi: %.cpp  Makefile
-	$(CC) $(CFLAGS) $(DEPFLAGS) -c $< -o $@
+	@$(CC) $(CFLAGS) $(DEPFLAGS) -c $< -o $@
 	@printf	"\033[1;33m \r\033[2KCreating -c $< -o $\n \033[0m"
 
 $(NAME): $(OBJ) $(HEADER) Makefile
-	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
+	@$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
 	@printf	"\033[1;32m \r\033[2K Compiling $(NAME) : DONE \033[0m\n"
 -include $(DEPENDS)
 

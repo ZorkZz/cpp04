@@ -10,7 +10,7 @@ int	main(void)
 	const Animal* j = new Dog();
 	const Animal* i = new Cat();
 	const WrongAnimal	*wronganimal = new WrongAnimal();
-	const WrongCat	*wrongcat = new WrongCat();
+	const WrongAnimal	*wrongcat = new WrongCat();
 
 	std::cout << std::endl;
 

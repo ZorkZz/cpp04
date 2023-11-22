@@ -10,6 +10,8 @@ int	main(void)
 	// delete j;
 	// delete i;
 	
+	// AAnimal a;
+
 	std::cout << std::endl;
 	std::cout << "--------------------------------------------------" << std::endl;
 	std::cout << "Cat tests" << std::endl;

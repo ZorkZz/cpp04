@@ -14,7 +14,7 @@ class AAnimal
 		AAnimal(const AAnimal &animal);
 		AAnimal &operator = (const AAnimal &animal);
 		virtual ~AAnimal();
-		virtual void		makeSound() const;
+		virtual void		makeSound() const = 0;
 		std::string			getType() const;
 
 	protected:

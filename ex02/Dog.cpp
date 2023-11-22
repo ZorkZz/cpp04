@@ -50,7 +50,7 @@ void	Dog::set_idea(size_t index, std::string idea)
 
 std::string	Dog::get_idea(size_t index) const
 {
-	return (this->get_idea(index));
+	return (this->_brain->get_idea(index));
 }
 
 void	Dog::show_all_idea(void) const
